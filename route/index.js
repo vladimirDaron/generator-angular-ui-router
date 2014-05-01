@@ -14,27 +14,25 @@ var Generator = module.exports = function Generator() {
 util.inherits(Generator, ScriptBase);
 
 Generator.prototype.rewriteAppJs = function () {
-  if (this.env.options.coffee) {
-    angularUtils.rewriteFile({
-      file: path.join(this.env.options.appPath, 'scripts/app.coffee'),
-      needle: '.otherwise',
+  var coffee=this.env.options.coffee;
+  var config={
+      file: path.join(
+        this.env.options.appPath,
+        'scripts/app.' + (coffee ? 'coffee' : 'js')
+      ),
+      needle: '.state',
       splicable: [
-        '.state \'/' + this.name + '\',',
+        '  url: \'/' + this.name + '\',',
         '  templateUrl: \'views/' + this.name + '.html\',',
         '  controller: \'' + this._.classify(this.name) + 'Ctrl\''
       ]
-    });
+  };
+  if(coffee){
+     config.splicable.unshift(".state '" + this.name + "',");
   }
-  else {
-    angularUtils.rewriteFile({
-      file: path.join(this.env.options.appPath, 'scripts/app.js'),
-      needle: '.otherwise',
-      splicable: [
-        '.state(\'/' + this.name + '\', {',
-        '  templateUrl: \'views/' + this.name + '.html\',',
-        '  controller: \'' + this._.classify(this.name) + 'Ctrl\'',
-        '})'
-      ]
-    });
+  else{
+     config.splicable.unshift(".state('" + this.name + "', {");
+     config.splicable.push("})");
   }
+  angularUtils.rewriteFile(config);
 };

@@ -10,9 +10,9 @@ Based on [angular-seed](https://github.com/angular/angular-seed/)
 
 ## Usage
 
-Install `generator-angular-ui-router`:
+Install `generator-angular-vdaron`:
 ```
-npm install -g generator-angular-ui-router
+npm install -g generator-angular-vdaron
 ```
 
 Make a new directory, and `cd` into it:
@@ -20,9 +20,9 @@ Make a new directory, and `cd` into it:
 mkdir my-new-project && cd $_
 ```
 
-Run `yo angular-ui-router`, optionally passing an app name:
+Run `yo angular-vdaron`, optionally passing an app name:
 ```
-yo angular-ui-router [app-name]
+yo angular-vdaron [app-name]
 ```
 
 Optionally using Sass:
@@ -37,18 +37,18 @@ Optionally using Sass:
 
 Available generators:
 
-* [angular-ui-router](#app) (aka [angular-ui-router:app](#app))
-* [angular-ui-router:controller](#controller)
-* [angular-ui-router:directive](#directive)
-* [angular-ui-router:filter](#filter)
-* [angular-ui-router:route](#route)
-* [angular-ui-router:service](#service)
-* [angular-ui-router:provider](#service)
-* [angular-ui-router:factory](#service)
-* [angular-ui-router:value](#service)
-* [angular-ui-router:constant](#service)
-* [angular-ui-router:decorator] (#decorator)
-* [angular-ui-router:view](#view)
+* [angular-vdaron](#app) (aka [angular-vdaron:app](#app))
+* [angular-vdaron:controller](#controller)
+* [angular-vdaron:directive](#directive)
+* [angular-vdaron:filter](#filter)
+* [angular-vdaron:route](#route)
+* [angular-vdaron:service](#service)
+* [angular-vdaron:provider](#service)
+* [angular-vdaron:factory](#service)
+* [angular-vdaron:value](#service)
+* [angular-vdaron:constant](#service)
+* [angular-vdaron:decorator] (#decorator)
+* [angular-vdaron:view](#view)
 
 **Note: Generators are to be run from the root directory of your app.**
 
@@ -57,7 +57,7 @@ Sets up a new AngularJS app, generating all the boilerplate you need to get star
 
 Example:
 ```bash
-yo angular-ui-router
+yo angular-vdaron
 ```
 
 ### Route
@@ -65,7 +65,7 @@ Generates a controller and view, and configures a route in `app/scripts/app.js` 
 
 Example:
 ```bash
-yo angular-ui-router:route myroute
+yo angular-vdaron:route myroute
 ```
 
 Produces `app/scripts/controllers/myroute.js`:
@@ -85,7 +85,7 @@ Generates a controller in `app/scripts/controllers`.
 
 Example:
 ```bash
-yo angular-ui-router:controller user
+yo angular-vdaron:controller user
 ```
 
 Produces `app/scripts/controllers/user.js`:
@@ -99,7 +99,7 @@ Generates a directive in `app/scripts/directives`.
 
 Example:
 ```bash
-yo angular-ui-router:directive myDirective
+yo angular-vdaron:directive myDirective
 ```
 
 Produces `app/scripts/directives/myDirective.js`:
@@ -120,7 +120,7 @@ Generates a filter in `app/scripts/filters`.
 
 Example:
 ```bash
-yo angular-ui-router:filter myFilter
+yo angular-vdaron:filter myFilter
 ```
 
 Produces `app/scripts/filters/myFilter.js`:
@@ -137,7 +137,7 @@ Generates an HTML view file in `app/views`.
 
 Example:
 ```bash
-yo angular-ui-router:view user
+yo angular-vdaron:view user
 ```
 
 Produces `app/views/user.html`:
@@ -150,7 +150,7 @@ Generates an AngularJS service.
 
 Example:
 ```bash
-yo angular-ui-router:service myService
+yo angular-vdaron:service myService
 ```
 
 Produces `app/scripts/services/myService.js`:
@@ -160,14 +160,14 @@ angular.module('myMod').service('myService', function () {
 });
 ```
 
-You can also do `yo angular-ui-router:factory`, `yo angular-ui-router:provider`, `yo angular-ui-router:value`, and `yo angular-ui-router:constant` for other types of services.
+You can also do `yo angular-vdaron:factory`, `yo angular-vdaron:provider`, `yo angular-vdaron:value`, and `yo angular-vdaron:constant` for other types of services.
 
 ### Decorator
 Generates an AngularJS service decorator.
 
 Example:
 ```bash
-yo angular-ui-router:decorator serviceName
+yo angular-vdaron:decorator serviceName
 ```
 
 Produces `app/scripts/decorators/serviceNameDecorator.js`:
@@ -188,7 +188,7 @@ For generators that output scripts, the `--coffee` option will output CoffeeScri
 
 For example:
 ```bash
-yo angular-ui-router:controller user --coffee
+yo angular-vdaron:controller user --coffee
 ```
 
 Produces `app/scripts/controller/user.coffee`:
@@ -204,7 +204,7 @@ By default, generators produce unannotated code. Without annotations, AngularJS'
 
 #### Example
 ```bash
-yo angular-ui-router:controller user --minsafe
+yo angular-vdaron:controller user --minsafe
 ```
 
 Produces `app/controller/user.js`:

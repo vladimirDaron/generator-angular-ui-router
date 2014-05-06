@@ -8,7 +8,7 @@ var generators = require('yeoman-generator');
 var helpers = require('yeoman-generator').test;
 var _ = require('underscore.string');
 
-describe('angular-ui-router generator', function () {
+describe('angular-vdaron generator', function () {
   var angular;
 
   beforeEach(function (done) {
@@ -25,7 +25,7 @@ describe('angular-ui-router generator', function () {
       if (err) {
         done(err);
       }
-      angular = helpers.createGenerator('angular-ui-router:app', deps);
+      angular = helpers.createGenerator('angular-vdaron:app', deps);
       angular.options['skip-install'] = true;
       done();
     });
@@ -129,7 +129,7 @@ describe('angular-ui-router generator', function () {
     var angularGenerator;
     var name = 'foo';
     var deps = [path.join('../..', generatorType)];
-    angularGenerator = helpers.createGenerator('angular-ui-router:' + generatorType, deps, [name]);
+    angularGenerator = helpers.createGenerator('angular-vdaron:' + generatorType, deps, [name]);
 
     helpers.mockPrompt(angular, {
       bootstrap: true,

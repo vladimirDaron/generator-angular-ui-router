@@ -40,15 +40,15 @@ var Generator = module.exports = function Generator(args, options) {
     args.push('--minsafe');
   }
 
-  this.hookFor('angular-ui-router:common', {
+  this.hookFor('angular-vdaron:common', {
     args: args
   });
 
-  this.hookFor('angular-ui-router:main', {
+  this.hookFor('angular-vdaron:main', {
     args: args
   });
 
-  this.hookFor('angular-ui-router:controller', {
+  this.hookFor('angular-vdaron:controller', {
     args: args
   });
 
